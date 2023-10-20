@@ -1,0 +1,16 @@
+.fieldBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 40px;
+
+  &__chipWrapper {
+    display: flex;
+    gap: 24px;
+  }
+
+  &__chip {
+    font-size: 24px;
+    padding: 8px 16px;
+  }
+}
