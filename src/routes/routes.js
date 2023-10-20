@@ -1,7 +1,8 @@
-import {ANALYTICS, MESSAGES, SEGMENTS} from "./const";
+import {ANALYTICS, CREATE_SEGMENT, MESSAGES, SEGMENTS} from "./const";
 import SegmentsPage from "../Pages/SegmentsPage/SegmentsPage";
 import MessagesPage from "../Pages/MessagesPage/MessagesPage";
 import AnalyticsPage from "../Pages/AnalyticsPage/AnalyticsPage";
+import CreateSegmentPage from "../Pages/CreateSegmentPage/CreateSegmentPage";
 
 export const routes = [
     {
@@ -22,5 +23,10 @@ export const routes = [
         path: ANALYTICS,
         element: <AnalyticsPage />,
     },
-
+    {
+        icon: '',
+        name: 'Create segment',
+        path: CREATE_SEGMENT,
+        element: <CreateSegmentPage />,
+    },
 ]
