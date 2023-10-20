@@ -1,10 +1,13 @@
 import React from 'react';
 import PageContainer from "../../Components/PageContainer/PageContainer";
+import FilterInput from "../../Components/FilterInput/FilterInput";
 
 const SegmentsPage = () => {
     return (
         <PageContainer>
-            <h1>segments page</h1>
+            <div>
+                <FilterInput label="Search by segments"/>
+            </div>
         </PageContainer>
     );
 };
