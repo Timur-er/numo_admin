@@ -4,7 +4,7 @@
 [посилання на демо сайту](https://numo-bot.netlify.app/segments) (❗ натисніть "Back to our site", якщо не завантажується)
 
 ## Посилання на відео
-[Посилання](https://streamable.com/1s0r3j).
+[Посилання](https://www.youtube.com/watch?v=3--LTho4oXQ). 
 За якість зображення перепрошуємо, технічий форс-мажор.
 
 ## Встановлення
