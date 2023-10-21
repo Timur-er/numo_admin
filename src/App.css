@@ -1,0 +1,31 @@
+:root {
+  --color-2: #D9D9D9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  /* font-family: TODO; */
+  font-size: 1rem;
+  line-height: 1;
+
+  /* Break too long words everywhere */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+
+/* Components */
+
+.bg-2 {
+  background-color: var(--color-2);
+}
