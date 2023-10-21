@@ -22,6 +22,3 @@
 
 ### `npm start`
 
-## [Посилання](https://github.com/Timur-er/numo_admin_endpoints) на гітхаб з ендпоінтами
-
-
