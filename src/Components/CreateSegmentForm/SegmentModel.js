@@ -1,4 +1,4 @@
-export const segmentModel = [
+export const segmentModelCustomerInfo = [
     {
         type: 'select',
         name: 'region_id',
@@ -42,25 +42,6 @@ export const segmentModel = [
         },
         initial_values: '',
     },
-    // {
-    //     type: 'string',
-    //     name: 'children_age',
-    //     placeholder: 'Children age',
-    //     options: ['3 years', '4 years', '5 years', '6 years'],
-    //     initial_values: '',
-    // },
-    // {
-    //     type: 'string',
-    //     name: 'register_time',
-    //     placeholder: 'Time of registration',
-    //     options: [
-    //         'Less then 6 month',
-    //         '6 - 12 month',
-    //         '12 - 18 month',
-    //         'more than 18 month',
-    //     ],
-    //     initial_values: '',
-    // },
     {
         type: 'string',
         name: 'recommendation_frequency',
@@ -71,18 +52,6 @@ export const segmentModel = [
         },
         initial_values: '',
     },
-    // {
-    //     type: 'string',
-    //     name: 'child_number',
-    //     placeholder: 'Number of children',
-    //     options: [
-    //         '1 child',
-    //         '2 children',
-    //         '3 children',
-    //         '4 or more',
-    //         ],
-    //     initial_values: '',
-    // },
     {
         type: 'string',
         name: 'customer_satisfaction',
@@ -93,11 +62,61 @@ export const segmentModel = [
         },
         initial_values: '',
     },
-    // {
-    //     type: 'string',
-    //     name: 'activity_period',
-    //     placeholder: 'Activity period',
-    //     options: ['7 days', '14 days', '21 days', 'Month', 'Quarter', 'Rarely'],
-    //     initial_values: '',
-    // },
+    {
+        type: 'slider',
+        name: 'register_time',
+        placeholder: 'Time of registration',
+        options: [
+            {value: 0, label: '0'},
+            {value: 6, label: '6'},
+            {value: 12, label: '12'},
+            {value: 18, label: '18'},
+            {value: 24, label: '24'},
+            {value: 30, label: '30'},
+        ],
+        start: 0,
+        end: 30,
+        initial_values: [6, 12],
+    },
+]
+
+export const segmentModelFamilyInfo = [
+    {
+        type: 'string',
+        name: 'activity_period',
+        placeholder: 'Activity period',
+        options: ['7 days', '14 days', '21 days', 'Month', 'Quarter', 'Rarely'],
+        initial_values: '',
+    },
+    {
+        type: 'slider',
+        name: 'child_number',
+        placeholder: 'Number of children',
+        options: [
+            {value: 0, label: '0'},
+            {value: 1, label: '1'},
+            {value: 2, label: '2'},
+            {value: 3, label: '3'},
+            {value: 4, label: '4'},
+            {value: 5, label: '5'},
+        ],
+        start: 0,
+        end: 5,
+        initial_values: [1, 3],
+    },
+    {
+        type: 'slider',
+        name: 'children_age',
+        placeholder: 'Children age',
+        options: [{value: 0, label: '0'},
+            {value: 1, label: '1'},
+            {value: 2, label: '2'},
+            {value: 3, label: '3'},
+            {value: 4, label: '4'},
+            {value: 5, label: '5'},
+        ],
+        start: 0,
+        end: 5,
+        initial_values: [0, 2],
+    },
 ]
