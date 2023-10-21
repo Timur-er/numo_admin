@@ -8,7 +8,7 @@
 
 Клонуйте репозиторій:
 
-### `git clone [посилання на ваш репозиторій]`
+### `git clone https://github.com/Timur-er/numo_admin.git`
 
 Перейдіть до директорії проекту:
 
