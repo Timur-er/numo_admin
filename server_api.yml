@@ -1,0 +1,80 @@
+info:
+  version: 1.0.0
+  title: Simple API
+  description: A simple API to illustrate OpenAPI concepts
+
+
+/segment/list:
+  description: Returns a list of segments
+  response:
+    type: array
+    items:
+      type: object
+      properties:
+        id: string
+        name: string
+        total_users: integer
+
+/segment/create:
+  description: Create a new segment
+  requestBody:
+    name: string
+
+    filters:
+      type: object
+      properties:
+        bot_type:
+          type: array
+          items:
+            type: string [viber, telegram]
+            
+        age_range:
+          type: object
+          properties:
+            from: integer
+            to: integer
+
+        region_id: number [1..25]
+
+        created_at_range:
+          type: object
+          properties:
+            from: date
+            to: date
+
+        recommendation_frequency: string [daily, weekly]
+
+        children_num_range:
+          type: object
+          properties:
+            from: integer
+            to: integer
+
+        is_active: boolean
+        is_unhappy: boolean
+        is_survey_not_finished: boolean
+        activity: integer | string [7, 14, 21, month, quarter, rarely]
+
+/segment/{segment_id}:
+  description: Obtain information about segment by its id
+  response:
+    type: object
+    properties:
+      id: string
+      name: string
+      filters: object
+      total_users: integer
+
+/segment/update/{segment_id}:
+  description: Update segment
+  requestBody:
+    field: string
+    value: any
+
+/segment/remove/{segment_id}:
+  description: Remove segment
+
+/segment/export/{segment_id}:
+  description: Export segment as an Excel-file
+  response:
+    type: csv
