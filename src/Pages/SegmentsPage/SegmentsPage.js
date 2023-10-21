@@ -1,11 +1,13 @@
 import React from 'react';
 import PageContainer from "../../Components/PageContainer/PageContainer";
-import CustomTable from "../../Components/CustomTable/CustomTable";
+import SegmentsTable from '../../Components/SegmentsTable/SegmentsTable'
+import CreateSegmentBtn from '../../Components/CreateSegmentBtn/CreateSegmentBtn'
 
 const SegmentsPage = () => {
     return (
         <PageContainer>
-            <CustomTable />
+            <CreateSegmentBtn />
+            <SegmentsTable />
         </PageContainer>
     );
 };

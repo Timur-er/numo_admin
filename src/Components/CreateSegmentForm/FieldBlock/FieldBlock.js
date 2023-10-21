@@ -18,23 +18,40 @@ const StyledChip = styled(Chip)(({ theme, selected }) => ({
 }));
 const FieldBlock = ({label, options, name}) => {
     const { values, setFieldValue } = useFormikContext();
-    const selectedChips = values[name];
+    const selectedChips = values[name] || [];
 
-    const handleChipClick = (option) => {
-        setFieldValue(name,
-            selectedChips.includes(option)
-                ? selectedChips.filter(chip => chip !== option)
-                : [...selectedChips, option]
-        );
+    options = {
+        all: 'All users',
+        ...options
+    }
+
+    const allValues = Object.keys(options)
+
+    const handleChipClick = (value) => {
+        let newChips
+    
+        if (value === 'all') {
+            if (selectedChips.includes(value)) newChips = []
+            else newChips = allValues
+        }
+        else {
+            newChips = selectedChips.filter(i => i !== 'all')
+            if (newChips.includes(value)) {
+                newChips = newChips.filter(chip => chip !== value)
+            }
+            else newChips =  [...newChips, value]
+        }
+
+        setFieldValue(name, newChips)
     };
 
-    const renderOptions = options.map((option, key) => {
-        const isSelected = selectedChips.includes(option);
+    const renderOptions = Object.entries(options).map(([value, label]) => {
+        const isSelected = selectedChips.includes(value);
         return <StyledChip
-            key={key}
+            key={value}
             selected={isSelected}
-            onClick={() => handleChipClick(option)}
-            label={option}
+            onClick={() => handleChipClick(value)}
+            label={label}
         />
     })
 

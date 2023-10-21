@@ -1,4 +1,5 @@
 export const SEGMENTS = '/segments'
+export const SEGMENT = '/segment/:id'
 export const MESSAGES = '/messages'
 export const ANALYTICS = '/analytics'
 export const CREATE_SEGMENT = '/createSegment'

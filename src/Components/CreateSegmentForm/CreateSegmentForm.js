@@ -4,6 +4,7 @@ import FieldBlock from "./FieldBlock/FieldBlock";
 import {Form, Formik} from "formik";
 import SelectField from "./SelectField/SelectField";
 import style from './CreateSegmentForm.module.scss'
+import { Server } from '../../server/Server'
 const CreateSegmentForm = () => {
 
     const initialValues = segmentModel.reduce((acc, segmentBlock) => {
@@ -31,7 +32,12 @@ const CreateSegmentForm = () => {
     })
 
     const onSubmit = (values) => {
-        console.log(values);
+        const filters = values
+
+        Server.segment.create({
+            name: `Segment ${Math.round(Math.random() * 1000)}`,
+            filters
+        })
     }
 
     return (
