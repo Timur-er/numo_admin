@@ -8,7 +8,9 @@ const CreateSegmentPage = () => {
             <header className='page-header flex justify-between items-end'>
                 Create a user segment
             </header>
-            <CreateSegmentForm />
+            <div className='mb-10'>
+                <CreateSegmentForm />
+            </div>
         </PageContainer>
     );
 };

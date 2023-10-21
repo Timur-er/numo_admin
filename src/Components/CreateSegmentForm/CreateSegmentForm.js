@@ -89,7 +89,7 @@ const CreateSegmentForm = () => {
         const filters = values
 
         Server.segment.create({
-            name: `Segment ${Math.round(Math.random() * 1000)}`,
+            name: filters.segment_name || `Segment ${Math.round(Math.random() * 1000)}`,
             filters
         })
 
