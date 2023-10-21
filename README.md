@@ -7,6 +7,11 @@
 [Посилання](https://www.youtube.com/watch?v=3--LTho4oXQ). 
 За якість зображення перепрошуємо, технічий форс-мажор.
 
+# Архітектура
+![image](https://github.com/Timur-er/numo_admin/assets/38740713/2f9610d4-09bc-4476-9565-f220fbb0ecbb)
+![image](https://github.com/Timur-er/numo_admin/assets/38740713/ba01fbd0-d54c-4615-b34a-aeee3b117b9d)
+![image](https://github.com/Timur-er/numo_admin/assets/38740713/68e9babe-4fd5-4bee-bcb2-1bda14a7824e)
+
 ## Встановлення
 
 Клонуйте репозиторій:
