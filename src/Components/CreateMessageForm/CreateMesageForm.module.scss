@@ -1,0 +1,45 @@
+.form {
+  &__section {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  &__inputWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  &__suggections {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 25px;
+    color: #1964FF;
+  }
+
+  &__scheduleSection {
+    display: flex;
+    gap: 120px;
+    vertical-align: center;
+    align-items: center;
+  }
+
+  &__calendarWrapper {
+    margin-left: 30px;
+    margin-top: 10px;
+  }
+
+  &__timeDesctioption {
+    display: flex;
+    flex-direction: column;
+    color: #8285A4;
+  }
+
+  &__submit {
+    width: 50%;
+    height: 40px;
+    font-size: 15px;
+  }
+}

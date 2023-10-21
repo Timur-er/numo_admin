@@ -1,0 +1,11 @@
+.pageSection {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 64px;
+
+  &__title {
+    color: #1964FF;
+    font-size: 18px;
+  }
+}

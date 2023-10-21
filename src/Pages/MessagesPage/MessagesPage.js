@@ -1,10 +1,15 @@
 import React from 'react';
 import PageContainer from "../../Components/PageContainer/PageContainer";
+import CreateMessageForm from "../../Components/CreateMessageForm/CreateMessageForm";
 
 const MessagesPage = () => {
     return (
         <PageContainer>
-            <h1>Message page</h1>
+            <header className='page-header flex justify-between items-end'>
+                Create a message
+            </header>
+
+            <CreateMessageForm />
         </PageContainer>
     );
 };
