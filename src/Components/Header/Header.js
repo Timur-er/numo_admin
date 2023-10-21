@@ -6,9 +6,9 @@ import {NavLink} from "react-router-dom";
 // header - menu
 const Header = () => {
 
-    const renderRoutes = routes.map(route => {
+    const renderRoutes = routes.map((route, key) => {
         return (
-            <NavLink className={style.header__link} to={route.path}>
+            <NavLink key={key} className={style.header__link} to={route.path}>
                 <span>{route.name}</span>
             </NavLink>
         )

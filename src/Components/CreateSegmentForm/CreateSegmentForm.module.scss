@@ -1,0 +1,26 @@
+.form {
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+  border-radius: 8px;
+  background: #FFF;
+  box-shadow: 1px 1px 2px 1px rgba(217, 217, 217, 0.20);
+  padding: 40px 100px;
+
+  &__submit {
+    margin: 0 auto;
+    border: none;
+    color: white;
+    font-size: 15px;
+    border-radius: 8px;
+    background: #1964FF;
+    width: 50%;
+    padding: 20px;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.03);
+      transition: 0.3s ease all;
+    }
+  }
+}

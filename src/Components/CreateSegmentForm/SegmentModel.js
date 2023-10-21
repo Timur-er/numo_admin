@@ -1,22 +1,50 @@
 export const segmentModel = [
     {
+        type: 'select',
+        name: 'territories',
+        placeholder: 'Territories',
+        options: [
+            'Київська',
+            'Дніпропетровська',
+            'Вінницька',
+            'Запорізька',
+            'Волинська',
+            'Донецька',
+            'Житомирська',
+            'Закарпатська',
+            'Івано-Франківська',
+            'Кіровоградська',
+            'Луганська',
+            'Львівська',
+            'Миколаївська',
+            'Одеська',
+            'Полтавська',
+            'Рівненська',
+            'Сумська',
+            'Тернопільська',
+            'Харківська',
+            'Херсонська',
+            'Хмельницька',
+            'Черкаська',
+            'Чернівецька',
+            'Чернігівська',
+            'Автономна Республіка Крим',
+        ],
+        initial_values: [],
+    },
+    {
         type: 'string',
         name: 'platform',
         placeholder: 'Platform',
-        options: ['Telegram', 'Viber']
+        options: ['Telegram', 'Viber'],
+        initial_values: '',
     },
     {
         type: 'string',
         name: 'children_age',
         placeholder: 'Children age',
-        options: ['3 years', '4 years', '5 years', '6 years']
-
-    },
-    {
-        type: 'string',
-        name: 'territories',
-        placeholder: 'Territories',
-        options: []
+        options: ['3 years', '4 years', '5 years', '6 years'],
+        initial_values: '',
     },
     {
         type: 'string',
@@ -27,7 +55,8 @@ export const segmentModel = [
             '6 - 12 month',
             '12 - 18 month',
             'more than 18 month',
-        ]
+        ],
+        initial_values: '',
     },
     {
         type: 'string',
@@ -36,7 +65,8 @@ export const segmentModel = [
         options: [
             'Once a day',
             'Once a week',
-        ]
+        ],
+        initial_values: '',
     },
     {
         type: 'string',
@@ -47,18 +77,21 @@ export const segmentModel = [
             '2 children',
             '3 children',
             '4 or more',
-            ]
+            ],
+        initial_values: '',
     },
     {
         type: 'string',
         name: 'customer_satisfaction',
         placeholder: 'Customer satisfaction',
-        options: ['Loyal users', 'Dissatisfied users']
+        options: ['Loyal users', 'Dissatisfied users'],
+        initial_values: '',
     },
     {
         type: 'string',
         name: 'activity_period',
         placeholder: 'Activity period',
-        options: ['7 days', '14 days', '21 days', 'Month', 'Quarter', 'Rarely']
+        options: ['7 days', '14 days', '21 days', 'Month', 'Quarter', 'Rarely'],
+        initial_values: '',
     },
 ]
