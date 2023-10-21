@@ -1,0 +1,14 @@
+.numberStat {
+   composes: bg-2 from global;
+
+   display: inline-block;
+   min-width: 6rem;
+   padding: 0.2rem 0.5rem;
+   border-radius: 0.5rem;
+   font-size: 1rem;
+
+   &__value {
+       margin-top: 0.5rem;
+       font-size: 1.7em;
+   }
+}
