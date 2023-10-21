@@ -5,6 +5,7 @@ import {Form, Formik} from "formik";
 import SelectField from "./SelectField/SelectField";
 import style from './CreateSegmentForm.module.scss'
 import { Server } from '../../server/Server'
+import { useNavigate } from 'react-router'
 const CreateSegmentForm = () => {
 
     const initialValues = segmentModel.reduce((acc, segmentBlock) => {
@@ -31,6 +32,8 @@ const CreateSegmentForm = () => {
         }
     })
 
+    const navigate = useNavigate();
+
     const onSubmit = (values) => {
         const filters = values
 
@@ -38,6 +41,8 @@ const CreateSegmentForm = () => {
             name: `Segment ${Math.round(Math.random() * 1000)}`,
             filters
         })
+
+        navigate(`/segments`)
     }
 
     return (

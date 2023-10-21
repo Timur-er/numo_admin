@@ -5,7 +5,7 @@ import SegmentStats from '../../Components/stats/SegmentStats/SegmentStats'
 const AnalyticsPage = () => {
     return (
         <PageContainer>
-            <h1>Analytics page</h1>
+            <h1 className='page-header mb-7'>Analytics</h1>
             <SegmentStats />
         </PageContainer>
     );

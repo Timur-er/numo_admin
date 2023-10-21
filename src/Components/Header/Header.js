@@ -19,7 +19,9 @@ const Header = () => {
 
     return (
         <div className={style.header}>
-            {renderRoutes}
+            <div>
+                {renderRoutes}
+            </div>
         </div>
     );
 };

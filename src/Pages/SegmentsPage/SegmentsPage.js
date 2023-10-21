@@ -6,13 +6,10 @@ import CreateSegmentBtn from '../../Components/CreateSegmentBtn/CreateSegmentBtn
 const SegmentsPage = () => {
     return (
         <PageContainer>
-            <header className='page-header flex justify-between items-end'>
+            <header className='page-header flex justify-between'>
                 Segments
                 <CreateSegmentBtn />
             </header>
-            <div className='flex justify-end'>
-                
-            </div>
             <SegmentsTable />
         </PageContainer>
     );

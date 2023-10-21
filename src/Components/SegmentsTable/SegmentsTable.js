@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Server } from '../../server/Server'
 import CustomTable from '../CustomTable/CustomTable'
 import { useNavigate } from "react-router";
+import SegmentBtns from '../../SegmentBtns'
 
 const SegmentsTable = () => {
   const [segments, setSegments] = useState([])
@@ -9,16 +10,19 @@ const SegmentsTable = () => {
   const refetch = async () => {
     // TODO: error handling
     setSegments(await Server.segment.list())
-    console.log(segments)
   }
 
   useEffect(() => {
     refetch();
   });
 
+  let isRemoving
   const onRemove = (segmentId) => {
-    Server.segment.remove(segmentId)
-    refetch()
+    isRemoving = true
+    setTimeout(() => {
+      refetch()
+      isRemoving = false
+    });
   }
 
   const columns = [
@@ -30,10 +34,7 @@ const SegmentsTable = () => {
       width: 200,
       renderCell: ({ row: { id }}) => {
         return (
-          <div class="flex gap-2">
-            <button class="btn-primary">Download</button>
-            <button class="btn-primary" onClick={() => onRemove(id)} >Remove</button>
-          </div>
+          <SegmentBtns segmentId={id} onRemove={onRemove} />
         )
       }
     }
@@ -46,7 +47,7 @@ const SegmentsTable = () => {
 
   const navigate = useNavigate();
   const onRowClick = ({ row: { id }}) => {
-    navigate(`/segment/${id}`)
+    if (!isRemoving) navigate(`/segment/${id}`)
   }
 
   return (

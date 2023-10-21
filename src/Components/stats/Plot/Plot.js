@@ -1,55 +1,54 @@
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-import style from './Plot.module.css'
 import { i18n } from '../../../I18n'
 
 const data = [
   {
-    name: '1',
-    uv: 4000,
-    pv: 2400,
+    name: 'Jan',
+    subs: 4000,
+    unsubs: 2400,
     amt: 2400,
   },
   {
-    name: '2',
-    uv: 3000,
-    pv: 1398,
+    name: 'Feb',
+    subs: 3000,
+    unsubs: 1398,
     amt: 2210,
   },
   {
-    name: '3',
-    uv: 2000,
-    pv: 9800,
+    name: 'Mar',
+    subs: 2000,
+    unsubs: 9800,
     amt: 2290,
   },
   {
-    name: '4',
-    uv: 2780,
-    pv: 3908,
+    name: 'Apr',
+    subs: 2780,
+    unsubs: 3908,
     amt: 2000,
   },
   {
-    name: '5',
-    uv: 1890,
-    pv: 4800,
+    name: 'May',
+    subs: 1890,
+    unsubs: 4800,
     amt: 2181,
   },
   {
-    name: '6',
-    uv: 2390,
-    pv: 3800,
+    name: 'Jun',
+    subs: 2390,
+    unsubs: 3800,
     amt: 2500,
   },
   {
-    name: '7',
-    uv: 3490,
-    pv: 4300,
+    name: 'Jul',
+    subs: 3490,
+    unsubs: 4300,
     amt: 2100,
   },
 ];
 
 const Plot = () => {
   return (
-    <div className={style.plot}>
+    <div className="w-[30rem] h-[20rem] m-auto mt-5">
       <ResponsiveContainer width="100%" height="100%">
         <LineChart
           width={500}
@@ -67,8 +66,8 @@ const Plot = () => {
           <YAxis />
           <Tooltip />
           <Legend />
-          <Line name={i18n.subs} type="monotone" dataKey="pv" stroke="#8884d8" activeDot={{ r: 8 }} />
-          <Line name={i18n.unsubs} type="monotone" dataKey="uv" stroke="#82ca9d" />
+          <Line name={i18n.subs} type="monotone" dataKey="subs" stroke="#1964FF" activeDot={{ r: 8 }} />
+          <Line name={i18n.unsubs} type="monotone" dataKey="unsubs" stroke="red" />
         </LineChart>
       </ResponsiveContainer>
     </div>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {Field, Form, Formik} from "formik";
 import SelectField from "../CreateSegmentForm/SelectField/SelectField";
 import PageSection from "../PageSection/PageSection";
@@ -8,6 +8,7 @@ import TextField from "@mui/material/TextField";
 import {DatePicker} from '@mui/x-date-pickers/DatePicker';
 import {LocalizationProvider} from '@mui/x-date-pickers/LocalizationProvider';
 import {AdapterDayjs} from '@mui/x-date-pickers/AdapterDayjs';
+import { Server } from '../../server/Server'
 
 const CreateMessageForm = () => {
     const [value, setValue] = React.useState('immediately');
@@ -15,6 +16,17 @@ const CreateMessageForm = () => {
     const handleChange = (event) => {
         setValue(event.target.value);
     };
+
+    const [segments, setSegments] = useState([])
+
+    const refetch = async () => {
+        // TODO: error handling
+        setSegments(await Server.segment.list())
+    }
+
+    useEffect(() => {
+        refetch();
+    });
 
     return (
         <Formik
@@ -36,7 +48,7 @@ const CreateMessageForm = () => {
                                 <SelectField
                                     label="select segements who will recieve advice..."
                                     name="receiver"
-                                    options={['segment1', 'segment2', 'segment3', 'segment4']}
+                                    options={segments.map(i => i.name)}
                                 />
                             </div>
 
@@ -49,7 +61,7 @@ const CreateMessageForm = () => {
                                 <SelectField
                                     label="select segements who will NOT recieve advice..."
                                     name="black_list"
-                                    options={['segment1', 'segment2', 'segment3', 'segment4']}
+                                    options={segments.map(i => i.name)}
                                 />
                             </div>
                         </div>
@@ -130,7 +142,7 @@ const CreateMessageForm = () => {
                             <div className={style.form__timeDesctioption}>
                         <span>
                             {/* чомусь я не можу вивести актуальну дату на екран */}
-                            {console.log(values.schedule_time)}
+                            {/* {console.log(values.schedule_time)} */}
                             Message will start sending Saturday, October 21,
                         </span>
                                 <span>

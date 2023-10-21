@@ -4,7 +4,7 @@ import st from './CustomTable.module.scss'
 
 const CustomTable = ({ rows, columns, onRowClick }) => {
     return (
-        <div class="">
+        <div>
             <div className="ml-2 mb-4 text-xs italic">
                 Click on the row to open details
             </div>

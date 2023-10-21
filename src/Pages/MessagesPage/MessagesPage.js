@@ -9,7 +9,9 @@ const MessagesPage = () => {
                 Create a message
             </header>
 
-            <CreateMessageForm />
+            <div className='mb-10'>
+                <CreateMessageForm />
+            </div>
         </PageContainer>
     );
 };
