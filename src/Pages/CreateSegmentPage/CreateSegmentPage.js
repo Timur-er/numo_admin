@@ -5,7 +5,9 @@ import CreateSegmentForm from "../../Components/CreateSegmentForm/CreateSegmentF
 const CreateSegmentPage = () => {
     return (
         <PageContainer>
-           <h1>Create a user segment</h1>
+            <header className='page-header flex justify-between items-end'>
+                Create a user segment
+            </header>
             <CreateSegmentForm />
         </PageContainer>
     );
