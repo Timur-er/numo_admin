@@ -1,0 +1,8 @@
+.table {
+  border: none;
+}
+
+.table :global(.MuiDataGrid-columnHeaders) {
+  color: var(--color-grey-dark) !important;
+  font-size: 0.8rem !important;
+}

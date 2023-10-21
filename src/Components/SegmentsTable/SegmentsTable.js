@@ -22,24 +22,27 @@ const SegmentsTable = () => {
   }
 
   const columns = [
-    {field: 'name', headerName: 'Segment name', width: 300},
-    {field: 'total_users', headerName: 'Users (k)', width: 300},
+    {field: 'name', headerName: 'Name', width: 400},
+    {field: 'total_users', headerName: 'Number of users', width: 300},
     {
       field: "actions",
       headerName: "Actions",
-      width: 300,
+      width: 200,
       renderCell: ({ row: { id }}) => {
         return (
-          <div>
-            <button>download</button>
-            <button onClick={() => onRemove(id)} >remove</button>
+          <div class="flex gap-2">
+            <button class="btn-primary">Download</button>
+            <button class="btn-primary" onClick={() => onRemove(id)} >Remove</button>
           </div>
         )
       }
     }
   ];
 
-  const rows = segments
+  const rows = segments.map((segment) => ({
+    ...segment,
+    total_users: `${segment.total_users} k`
+  }))
 
   const navigate = useNavigate();
   const onRowClick = ({ row: { id }}) => {

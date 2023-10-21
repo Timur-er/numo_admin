@@ -1,5 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
-  --color-2: #D9D9D9;
+  --color-1: #1964FF; /* Primary */
+  --color-2: #FBFBFB; /*  */
+  --color-3: #0B203E; /* Black */
+  --color-4: #FBFBFB; /* Page bg */
+  --color-grey-dark: #8285A4;
 }
 
 * {
@@ -14,7 +22,6 @@ html, body {
 body {
   width: 100%;
   height: 100%;
-  /* font-family: TODO; */
   font-size: 1rem;
   line-height: 1;
 
@@ -23,11 +30,43 @@ body {
   overflow-wrap: break-word;
 
   font-family: 'Inter', sans-serif;
+  color: #0B203E;
+  background-color: var(--color-4);
 }
 
 
 /* Components */
+@layer components {
+  .page-header {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
 
-.bg-2 {
-  background-color: var(--color-2);
+  .btn {
+    border-radius: 0.4rem;
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+  }
+  .btn:hover {
+    filter: brightness(1.2)
+  }
+  .btn:active {
+    transform: translateY(5%);
+  }
+  
+  .btn-primary {
+    @apply btn bg-1 text-white;
+  }
+}
+
+@layer utilities {
+  .bg-1 { background-color: var(--color-1) }
+  .bg-2 { background-color: var(--color-2) }
+  .bg-3 { background-color: var(--color-3) }
+  .bg-4 { background-color: var(--color-4) }
+  
+  .text-1 { color: var(--color-1) }
+  .text-2 { color: var(--color-2) }
+  .text-2 { color: var(--color-2) }
 }

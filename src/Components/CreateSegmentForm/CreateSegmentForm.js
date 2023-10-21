@@ -44,7 +44,7 @@ const CreateSegmentForm = () => {
         <Formik initialValues={initialValues} onSubmit={onSubmit}>
             <Form className={style.form}>
                 {renderInputs}
-                <button className={style.form__submit} type='submit'>Create segment</button>
+                <button className="btn-primary" type='submit'>Create segment</button>
             </Form>
         </Formik>
     );
