@@ -7,6 +7,9 @@
 [Посилання](https://www.youtube.com/watch?v=3--LTho4oXQ). 
 За якість зображення перепрошуємо, технічий форс-мажор.
 
+## Макети в Figma
+[Посилання](https://www.figma.com/file/K36lfiCbkEIKVY8t3iwy20/%D0%A5%D0%B0%D0%BA%D0%B0%D1%82%D0%BE%D0%BD-%D0%94%D0%B8%D0%B7%D0%B0%D0%B9%D0%BD?type=design&node-id=17-1377&mode=design&t=EMj8vB90NNDsmIoF-0)
+
 ## Архітектура
 ❗ REST API - у файлі server_api.yml.
 ![image](https://github.com/Timur-er/numo_admin/assets/38740713/2f9610d4-09bc-4476-9565-f220fbb0ecbb)
